@@ -1,0 +1,22 @@
+.header{
+text-align: center;
+background-color: #45046A;
+height: 200px;
+width: 100%;
+font-size: 2em;
+font-family: "Segoe UI";
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+}
+#logoPersonal{
+    float: left;
+    width: 100px;
+    
+}
+#logoGithub{
+    float: right;
+    width: 150px;
+    
+}
