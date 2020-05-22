@@ -23,8 +23,4 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Further help
-<div>
-<p align="center">
-  <img src=/E1#2.jpge  title="E1#2">
-  </p>
-</div>
+
