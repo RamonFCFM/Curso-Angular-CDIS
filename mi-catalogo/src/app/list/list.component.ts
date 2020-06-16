@@ -3,19 +3,17 @@ import { Automovil } from '../models';
 import { AUTOMOVILES } from '../data';
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+	selector: 'app-list',
+	templateUrl: './list.component.html',
+	styleUrls: ['./list.component.css']
 })
+
 export class ListComponent implements OnInit {
-  autos: Automovil[];
+  autos:Automovil[];
 
-  constructor() { }
-
+  constructor(){}
+  
   ngOnInit(){
-    this.autos = AUTOMOVILES;
+    this.autos= AUTOMOVILES;
   }
-
 }
-
-
