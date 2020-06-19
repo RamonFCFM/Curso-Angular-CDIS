@@ -1,28 +1,26 @@
+
 .vistas{
-color: rgb(149, 155, 246);
-font-family: "Segoe UI";
-text-align: center;
-display: flex;
-justify-content: space-between;
-}
-#Lista{
-    
+    background-color: #ff6464;
+    font-family: "Segoe UI";
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  #Lista{
     width: 100%;
-    background-color: teal;
     height: 30px;
-    font-size: 2em;
+    font-size: 1.5em;
     display: flex;
     align-items: center;
     justify-content: center;
     float: left;
-}
-#Tabla{
-    background-color: rgb(240, 75, 75);
+  }
+  #Tabla{
     width: 100%;
     height: 30px;
-    font-size: 2em;
+    font-size: 1.5em;
     display: flex;
     align-items: center;
     justify-content: center;
     float: right;
-}
+  }
