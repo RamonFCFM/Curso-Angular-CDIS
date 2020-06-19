@@ -1,20 +1,32 @@
-<!--<div *ngFor='let auto of autos'>
-{{auto.descripcion}} / {{auto.submarca}}
-</div>-->
-
-
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
-<div *ngFor="let auto of autos | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
-
-  <div class="container-list" id="font-list">
-    <div (click)="open(content, auto)">
-      <i class="fas fa-eye fa-2x"></i>
+<ng-container  *ngFor="let auto of autos">
+    <div class="list">
+        
+        <div class="item item-icon fas fa-eye fa 3x" (click)="onSelect(auto, autoModal)" id="icono-ojo" ></div>
+        
+        <div class="item item-descripcion" id="descripcion-autos" >{{ auto.descripcion }}</div>
     </div>
-    <div>
-      {{auto.descripcion}}
-    </div>
-  </div>
+<br>
+</ng-container >
+
+<div class="info">
+    {{ autoSeleccionado.marca }} - {{autoSeleccionado.fecha_registro}}
 </div>
 
 
+<ng-template #autoModal > 
+    <div class="modal-header"> 
+        <h4 class="model-title" id="modal-title"> Descripcion </h4>
+    </div>    
+    <div class="modal-body"> 
+        <div>{{autoSeleccionado.marca}}</div>
+        <div>{{autoSeleccionado.submarca}}</div>
+        <div>{{autoSeleccionado.modelo}}</div>
+        <div>{{autoSeleccionado.descripcion}}</div>
+        <div>{{autoSeleccionado.fecha_registro}}</div>
+    </div>    
+    <div class="modal-footer"> 
+        <button type="button" class="btn btn-outline-dark" (click)="modal.dismiss()">Salir</button>
+    </div> 
+
+</ng-template>
 

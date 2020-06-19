@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Automovil } from '../models';
 import { AUTOMOVILES } from '../data';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap'; 
 
 @Component({
 	selector: 'app-list',
@@ -9,11 +10,25 @@ import { AUTOMOVILES } from '../data';
 })
 
 export class ListComponent implements OnInit {
-  autos:Automovil[];
+  autos: Automovil[];
+  autoSeleccionado: Automovil;
+ 
 
-  constructor(){}
+
+  constructor( private modalService:NgbModal ){}
   
-  ngOnInit(){
+  ngOnInit(): void{
     this.autos= AUTOMOVILES;
+
+
   }
+
+  onSelect(auto:Automovil){
+    this.autoSeleccionado = auto;
+  }
+
+
+
+
 }
+
